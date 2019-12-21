@@ -1,8 +1,8 @@
-package ar.com.marete.Basic.repository;
+package ar.com.marete.basic.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import ar.com.marete.Basic.entidades.Persona;
+import ar.com.marete.basic.entidades.Persona;
 
 public interface PersonaRepository extends CrudRepository<Persona,String>{
 

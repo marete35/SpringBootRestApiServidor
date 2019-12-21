@@ -1,4 +1,4 @@
- package ar.com.marete.Basic.filters;
+ package ar.com.marete.basic.filters;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.GenericFilterBean;
 
-import ar.com.marete.Basic.servicios.HttpParserService;
+import ar.com.marete.basic.servicios.HttpParserService;
 
 public class FiltroJWTAutenticacion extends GenericFilterBean{
 

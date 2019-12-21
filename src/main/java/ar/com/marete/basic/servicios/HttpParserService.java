@@ -1,4 +1,4 @@
-package ar.com.marete.Basic.servicios;
+package ar.com.marete.basic.servicios;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.security.core.Authentication;
 
-import ar.com.marete.Basic.mappings.UsuarioAutenticado;
+import ar.com.marete.basic.mappings.UsuarioAutenticado;
 
 public class HttpParserService {
 	

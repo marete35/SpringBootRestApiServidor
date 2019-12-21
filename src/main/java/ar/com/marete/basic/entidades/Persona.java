@@ -1,4 +1,4 @@
-package ar.com.marete.Basic.entidades;
+package ar.com.marete.basic.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

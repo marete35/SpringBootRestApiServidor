@@ -1,4 +1,4 @@
-package ar.com.marete.Basic.servicios;
+package ar.com.marete.basic.servicios;
 
 import java.util.Base64;
 import java.util.Date;

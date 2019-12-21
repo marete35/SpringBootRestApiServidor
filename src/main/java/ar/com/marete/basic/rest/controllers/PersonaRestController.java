@@ -1,4 +1,4 @@
-package ar.com.marete.Basic.rest.controllers;
+package ar.com.marete.basic.rest.controllers;
 
 import java.util.Optional;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import ar.com.marete.Basic.entidades.Persona;
-import ar.com.marete.Basic.repository.PersonaRepository;
+import ar.com.marete.basic.entidades.Persona;
+import ar.com.marete.basic.repository.PersonaRepository;
 
 @RestController
 @RequestMapping("webapi")

@@ -1,4 +1,4 @@
-package ar.com.marete.Basic.mappings;
+package ar.com.marete.basic.mappings;
 
 public class Usuario {
 	
