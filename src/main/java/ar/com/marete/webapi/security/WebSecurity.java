@@ -1,4 +1,4 @@
-package ar.com.marete.basic.security;
+package ar.com.marete.webapi.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import ar.com.marete.basic.filters.FilterLogin;
-import ar.com.marete.basic.filters.FiltroJWTAutenticacion;
+import ar.com.marete.webapi.filters.FilterLogin;
+import ar.com.marete.webapi.filters.FiltroJWTAutenticacion;
 
 @Configuration
 public class WebSecurity extends WebSecurityConfigurerAdapter{

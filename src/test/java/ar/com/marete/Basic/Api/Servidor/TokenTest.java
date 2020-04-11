@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 
 import org.junit.jupiter.api.Test;
 
-import ar.com.marete.basic.servicios.TokenService;
+import ar.com.marete.webapi.servicios.TokenService;
 
 public class TokenTest {
 

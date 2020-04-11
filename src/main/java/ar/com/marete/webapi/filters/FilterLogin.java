@@ -1,4 +1,4 @@
-package ar.com.marete.basic.filters;
+package ar.com.marete.webapi.filters;
 
 import java.io.IOException;
 
@@ -15,8 +15,8 @@ import org.springframework.security.web.authentication.AbstractAuthenticationPro
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ar.com.marete.basic.mappings.Usuario;
-import ar.com.marete.basic.servicios.HttpParserService;
+import ar.com.marete.webapi.mappings.Usuario;
+import ar.com.marete.webapi.servicios.HttpParserService;
 
 public class FilterLogin extends AbstractAuthenticationProcessingFilter{
 	
