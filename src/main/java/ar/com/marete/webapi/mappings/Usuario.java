@@ -1,18 +1,9 @@
 package ar.com.marete.webapi.mappings;
 
 public class Usuario {
-	
+
 	private String nombre;
 	private String password;
-	
- 	public Usuario() {
-		super();
-	}
-	public Usuario(String nombre, String password) {
-		super();
-		this.nombre = nombre;
-		this.password = password;
-	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -25,7 +16,14 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Usuario(String nombre, String password) {
+		super();
+		this.nombre = nombre;
+		this.password = password;
+	}
+	public Usuario() {
+		super();
+	}
 	
 	
-
 }

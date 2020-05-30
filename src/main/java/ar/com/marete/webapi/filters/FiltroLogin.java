@@ -18,37 +18,46 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import ar.com.marete.webapi.mappings.Usuario;
 import ar.com.marete.webapi.servicios.HttpParserService;
 
-public class FilterLogin extends AbstractAuthenticationProcessingFilter{
-	
-	private HttpParserService httpParserService;
+public class FiltroLogin extends AbstractAuthenticationProcessingFilter{
 
-	/**
-	 * Constructor de la clase. 
-	 * @param url url para loguearse. 
-	 * @param manager
-	 */
-	public FilterLogin(String url, AuthenticationManager manager) {
+	private HttpParserService httpParserService;
+	
+	
+	public FiltroLogin(String url ,AuthenticationManager manager) {
+		
 		super(url);
-		HttpParserService httpParserService = new HttpParserService();
+		httpParserService= new HttpParserService();
 		setAuthenticationManager(manager);
+		
 	}
 
 	@Override
-	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)//intentar autenticarse.
+	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
 			throws AuthenticationException, IOException, ServletException {
-		//lee el usuario y la clave de una peticion post en la cual los adjuntemos via json.
+		
+		
+		
+	
+		
+		
 		Usuario usuario = new ObjectMapper().readValue(request.getInputStream(),Usuario.class);
-		UsernamePasswordAuthenticationToken usuarioSpringToken = new UsernamePasswordAuthenticationToken(usuario.getNombre(), usuario.getNombre());
-		return getAuthenticationManager().authenticate(usuarioSpringToken);
+		System.out.println(usuario.getNombre());
+		System.out.println(usuario.getPassword());
+		UsernamePasswordAuthenticationToken usuarioSpring = new UsernamePasswordAuthenticationToken(usuario.getNombre(), usuario.getPassword());
+		return getAuthenticationManager().authenticate(usuarioSpring);
 	}
 
 	@Override
 	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
-			Authentication authentication) throws IOException, ServletException {
+			Authentication autentication) throws IOException, ServletException {
 		
-		String nombreUsuario = authentication.getName();
+		String nombreUsuario= autentication.getName();
 		httpParserService.creaToken(response, nombreUsuario);
+		
 	}
-
 	
+	
+	
+	
+
 }

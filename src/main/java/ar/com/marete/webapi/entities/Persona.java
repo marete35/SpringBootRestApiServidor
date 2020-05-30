@@ -1,17 +1,10 @@
-package ar.com.marete.webapi.entidades;
+package ar.com.marete.webapi.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="personas") 
 public class Persona {
 
-	@Id
 	private String nombre;
 	private String apellidos;
-	private int edad;
+	private Integer edad;
 
 	public String getNombre() {
 		return nombre;

@@ -19,13 +19,16 @@ public class FiltroJWTAutenticacion extends GenericFilterBean{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		//asumimos que recibimos un token, que es nuestro token jwt con el usuario que necesitamos.
-		Authentication authentication = new HttpParserService().leeToken((HttpServletRequest) request);
 		
-		//asigna token de autenticacion que acabmos de validar con el servicio httpparser
-		SecurityContextHolder.getContext().setAuthentication(authentication); 
+		// asumimos que recibimos un token , que es nuestro token jwt con el usuario que necesitamos
+		  Authentication authentication = new HttpParserService().leeToken((HttpServletRequest)request);
 		
-		chain.doFilter(request,response);
+		  //asigna token de autenticacion que acabamos de validar con el servicio httpparser
+		
+		  SecurityContextHolder.getContext().setAuthentication(authentication);
+		  chain.doFilter(request,response);
+		
+		
 	}
 	
 	

@@ -6,22 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.zaxxer.hikari.HikariDataSource;
 
+
+//
 @SpringBootApplication
+@ComponentScan("ar.com.marete")
 public class SpringBootRestApiApplication implements CommandLineRunner{
 	
 	@Autowired
 	DataSource dataSource;
-	
 
 	/**
 	 * Codigo que se ejecuta despues que comenzo la aplicacion
 	 */
 	public void run(String... args) throws Exception{
-		/**System.out.println("DATASOURCE Utilizado= " + dataSource);
-		if(args.length > 0) {
+		System.out.println("DATASOURCE Utilizado= " + dataSource);
+		/**if(args.length > 0) {
 			System.out.println(args[0].toString());
 		}else {
 			System.out.println("mario");
@@ -33,8 +36,6 @@ public class SpringBootRestApiApplication implements CommandLineRunner{
         System.out.println("DATASOURCE MAX POOL = " + newds.getMaximumPoolSize());
         System.out.println("DATASOURCE CONNECT TIMEOUT = " + newds.getConnectionTimeout() + " milisegundos");
         System.out.println("DATASOURCE JDBC URL = " + newds.getJdbcUrl());
-        
-        
         System.out.println("DATASOURCE ISOLATION TRANSACTION = " + newds.getTransactionIsolation()); 
         System.out.println("DATASOURCE ISAUTOCOMMIT = " + newds.isAutoCommit());
         System.out.println("DATASOURCE POOL NAME = " + newds.getPoolName());
